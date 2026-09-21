@@ -25,3 +25,14 @@ print(type(10.5))
 print(type("hi"))
 
 # Type Casting (converting between types)
+x = "5" 
+y = int(x) # 5 (string to int)
+z = float(x) # 5.0
+s = str(x) # "10" (int to string)
+
+print(y + 10) # 15
+
+# A classic trap
+# age = input("Enter your age: ")  Note:- input always returns string
+# print(age + 5)  ❌ Error! Can't add int to str
+# print(int(age) + 5) ✅ Works
