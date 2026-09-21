@@ -90,3 +90,45 @@ print(name[0:3]) # 'Pyt'  -> characters at index 0, 1, 2 (not 3)
 
 name, age = "Alex", 25
 print(f"{name} is {age} years old, and next year will be {age + 1}")
+
+# Basics of Data Structure
+
+
+# List — your default choice for a collection of items that might change:
+fruits = ["apple", "banana", "cherry"]
+# Ordered means the items keep their position; 
+# indexable by position (fruits[0]); 
+# mutable means we can add/remove/change items after creation.
+
+# Tuple - like a list, but locked (immutable)
+point = (10,20)
+
+# why use this instead of a list? 
+# Two reasons: (1) it signals to anyone reading your code "this data shouldn't change," 
+# and (2) tuples are slightly faster and can be used as dictionary keys 
+# (lists cannot, because dict keys must be immutable).
+
+
+#  Dictionary - the tool for "look something up by a name, instantly"
+person = {"name": "Alex", "age": 25}
+print(person["name"])   # instant lookup, doesn't matter how big the dict is
+
+# Internally, a dict uses something called hashing —
+#  it converts the key into a number and jumps straight to that spot in memory,
+#  rather than scanning every item like a list would. 
+# That's why dict lookups stay fast even with millions of entries,
+#  while searching a huge list gets slower as it grows.
+
+
+# Set - a collection that automatically removes duplicates and doesn't preserve order
+nums = [1, 2, 2, 3, 3, 3]
+unique = set(nums)
+print(unique)   # {1, 2, 3}
+
+
+# Note :-
+# Rule of thumb: 
+# need order + duplicates + changeable → list. 
+# Need a fixed sequence → tuple.
+#  Need to look things up by name → dict. 
+# Need uniqueness or fast membership checks → set.
