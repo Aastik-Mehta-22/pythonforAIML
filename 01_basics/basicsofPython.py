@@ -68,3 +68,25 @@ a = [1, 2, 3]
 b = [1, 2, 3]
 print(a == b)   # True  -> same values
 print(a is b)   # False -> different objects in memory
+
+# Strings - Indexing, Slicing, and immutability
+# Strings in python are immutable - once created, you can not change a 
+# character in place
+
+name = "Python"
+# name[0] = "J"   ❌ Error — strings can't be modified this way
+name = "J" + name[1:]   # ✅ This creates a brand new string instead
+
+#Indexing starts from 0 negative indices count from the end
+name = "Python"
+print(name[0])    # 'P' (first character)
+print(name[-1])   # 'n' (last character)
+
+# Slicing — name[start:end] gives you a sub-string, 
+# where start is included and end is excluded.
+print(name[0:3]) # 'Pyt'  -> characters at index 0, 1, 2 (not 3)
+
+# f-strings are the modern way to build strings with variables/expressions embedded:
+
+name, age = "Alex", 25
+print(f"{name} is {age} years old, and next year will be {age + 1}")
