@@ -132,3 +132,23 @@ print(unique)   # {1, 2, 3}
 # Need a fixed sequence → tuple.
 #  Need to look things up by name → dict. 
 # Need uniqueness or fast membership checks → set.
+
+# Control Flow and loops - How Python decides what run
+# if/elif/else runs top to bottom and stops at the first True Condition
+# - later conditions aren't even checked once one matches:
+
+marks = 75
+if marks >= 90:
+    print("A")
+elif marks >= 60:     # this is the one that hits — checking stops here
+    print("B")
+else:
+    print("C")
+
+# for loops
+for fruit in ["apple", "banana"]:
+    print(fruit)     # you get the actual VALUES, not index numbers
+
+# If we need the index too, use enumerate():
+for i, fruit in enumerate(["apple", "banana"]):
+    print(i, fruit)   # 0 apple, 1 banana
